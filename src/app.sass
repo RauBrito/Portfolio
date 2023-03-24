@@ -1,13 +1,16 @@
 
 .root
+    position: relative
     width: 100vw
     height: 100vh
     background-color: #191919
     display: flex
-    align-items: center
-    justify-content: center
+    // align-items: center
+    // justify-content: center
 
 .box
+    align-self: center
+    margin: auto
     width: 350px
     height: 350px
     border: 1px solid #fff
@@ -23,5 +26,16 @@
     background-color: #8c8787
     border-radius: 12px
     width: 200px
+    height: 60px
+    cursor: pointer
+
+.boxAbs
+    top: 100px
+    left: 200px
+    position: absolute
+    // background-color: #F2C964
+    border: 2px solid #F2C964
+    border-radius: 4px
+    width: 100px
     height: 60px
     cursor: pointer
