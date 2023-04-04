@@ -1,44 +1,43 @@
 import { useState, useEffect } from "react";
 import "./app.sass";
 import {
-  gamepad,
-  user,
-  home,
+  // gamepad,
+  // user,
+  // home,
   box,
-  arrGamepad,
-  arrBox,
-  arrUser,
-  arrHome,
 } from "./icons/Paths";
 
-import {
-  useSpring,
-  motion,
-  motionValue,
-  useMotionValue,
-  useTransform,
-  useTime,
-  useMotionValueEvent,
-  useAnimate,
-  animate,
-} from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
-import { interpolate, splitPathString, interpolateAll } from "flubber";
+import { interpolate } from "flubber";
+import blobShape from "./icons/blobshape";
+import * as blobs2 from "blobs/v2";
 // const paths = [arrGamepad, arrBox, arrHome, arrUser];
-const paths = [gamepad, box, home, user];
+// const paths = [gamepad, box, home, user];
 
 const rand = (min, max) => {
   return Math.floor(Math.random() * (max - min) + min);
 };
 const randomLine = () => {
-  let p1 = `${rand(0, 100)} ${rand(0, 150)}`;
-  let p2 = `${rand(100, 200)} ${rand(0, 150)}`;
-  let p3 = `${rand(200, 300)} ${rand(0, 150)}`;
-  let p4 = `${rand(200, 300)} ${rand(150, 300)}`;
-  let p5 = `${rand(100, 200)} ${rand(150, 300)}`;
-  let p6 = `${rand(0, 100)} ${rand(150, 300)}`;
+  // let p1 = `${rand(0, 100)} ${rand(0, 150)}`;
+  // let p2 = `${rand(100, 200)} ${rand(0, 150)}`;
+  // let p3 = `${rand(200, 300)} ${rand(0, 150)}`;
+  // let p4 = `${rand(200, 300)} ${rand(150, 300)}`;
+  // let p5 = `${rand(100, 200)} ${rand(150, 300)}`;
+  // let p6 = `${rand(0, 100)} ${rand(150, 300)}`;
 
-  return `M ${p1} L ${p2} L ${p3} L ${p4} L ${p5} L ${p6} L ${p1} `;
+  // return `M ${p1} L ${p2} L ${p3} L ${p4} L ${p5} L ${p6} L ${p1} `;
+
+  // const { path, seedValue } = blobShape()
+  // return path
+
+  const svgPath = blobs2.svgPath({
+    seed: Math.random(),
+    extraPoints: 6,
+    randomness: 5,
+    size: 400,
+  });
+  return svgPath;
 };
 
 function App() {
@@ -65,55 +64,7 @@ function App() {
     return () => {
       a.stop();
     };
-  }, [paths]);
-
-  const [paths2, setPaths2] = useState([randomLine(), randomLine()]);
-  const progress2 = useMotionValue(0);
-  const path2 = useTransform(progress2, [0, 1], paths2, {
-    mixer: (a, b) => {
-      return interpolate(a, b, { maxSegmentLength: 5 });
-    },
-  });
-  useEffect(() => {
-    progress2.set(0);
-    let a = animate(progress2, 1, {
-      duration: pause ? 0.5 : 3.1,
-      onComplete: () => {
-        !pause &&
-          setPaths2((prev) => {
-            progress2.set(0);
-            return [prev[1], randomLine()];
-          });
-      },
-    });
-    return () => {
-      a.stop();
-    };
-  }, [paths2]);
-
-  const [paths3, setPaths3] = useState([randomLine(), randomLine()]);
-  const progress3 = useMotionValue(0);
-  const path3 = useTransform(progress3, [0, 1], paths3, {
-    mixer: (a, b) => {
-      return interpolate(a, b, { maxSegmentLength: 5 });
-    },
-  });
-  useEffect(() => {
-    progress3.set(0);
-    let a = animate(progress3, 1, {
-      duration: pause ? 0.5 : 2.7,
-      onComplete: () => {
-        !pause &&
-          setPaths3((prev) => {
-            progress3.set(0);
-            return [prev[1], randomLine()];
-          });
-      },
-    });
-    return () => {
-      a.stop();
-    };
-  }, [paths3]);
+  }, [paths, pause, progress]);
 
   const advance = () => {
     // if (pause) {
@@ -128,14 +79,10 @@ function App() {
   const enter = () => {
     setPause(true);
     setPaths([path.current, box]);
-    setPaths2([path2.current, box]);
-    setPaths3([path2.current, box]);
   };
   const leave = () => {
     setPause(false);
     setPaths([path.current, randomLine()]);
-    setPaths2([path2.current, randomLine()]);
-    setPaths3([path2.current, randomLine()]);
   };
 
   return (
@@ -146,25 +93,27 @@ function App() {
         onMouseEnter={enter}
         onMouseLeave={leave}
       >
-        <svg width="300" height="300" fill="white">
+        <svg width="500" height="500" fill="none"  >
+          <path
+            d="M2 381.57L215.989 274.094M407 353.121L215.989 274.094M215.989 274.094V0.5"
+            stroke="white"
+            stroke-width="5"
+            fill="none"
+          />
+
           <motion.path
             d={path}
-            stroke="#fff"
-            fill="none"
+            stroke="#000"
+            fill="#898989"
             strokeLinejoin={"round"}
             strokeWidth={1}
+            className="blob"
           />
-          <motion.path
-            d={path2}
-            stroke="#fff"
+          <path
+            d="M3 116.799L216.989 3L408 78.8658M3 116.799L176.777 191.084M3 116.799V387.07L176.777 474M176.777 191.084L408 78.8658M176.777 191.084V474M408 78.8658V358.621L176.777 474"
+            stroke="white"
+            stroke-width="5"
             fill="none"
-            strokeLinejoin={"round"}
-          />
-          <motion.path
-            d={path3}
-            stroke="#fff"
-            fill="none"
-            strokeLinejoin={"round"}
           />
         </svg>
       </motion.div>
