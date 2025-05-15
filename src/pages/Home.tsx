@@ -9,7 +9,7 @@ const Home = () => {
         <Right />
         <div className="absolute bottom-6">
           <Lines />
-        </div>
+        </div> 
       </div>
     </div>
   );

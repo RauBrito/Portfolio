@@ -1,4 +1,5 @@
 import Header from '../components/Header'
+import AboutMe from './AboutMe'
 import Home from './Home'
 function App() {
 
@@ -6,6 +7,7 @@ function App() {
     <div className='overflow-x-hidden' >
       <Header />
       <Home/>
+      <AboutMe />
     </div>
   )
 }

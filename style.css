@@ -76,6 +76,10 @@ table {
   font-family: "MatrixMono";
   src: url("../../../fonts/MatrixMono.ttf"),
 }
+@font-face {
+  font-family: "Pixelify";
+  src: url("../../../fonts/PixelifySans.ttf"),
+}
 
 
 @import "tailwindcss";
