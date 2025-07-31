@@ -1,1 +1,0 @@
-export const baseAnim = 'transition duration-150 ease-in-out '
