@@ -328,20 +328,15 @@ export const DATA = {
       location: "Zulia, Venezuela",
     },
     socialLinks: [
-      { platform: "X", url: "https://x.com", icon: "simple-icons:x" },
-      { platform: "GitHub", url: "https://github.com", icon: "mdi:github" },
-      {
-        platform: "LinkedIn",
-        url: "https://linkedin.com",
-        icon: "mdi:linkedin",
-      },
-      {
-        platform: "Dribbble",
-        url: "https://dribbble.com",
-        icon: "mdi:dribbble",
-      },
+      // { platform: "X", url: "https://x.com", icon: "simple-icons:x" },
+      { platform: "GitHub", url: "https://github.com/RauBrito", icon: "mdi:github" }
+      // ,{
+      //   platform: "Dribbble",
+      //   url: "https://dribbble.com",
+      //   icon: "mdi:dribbble",
+      // },
     ],
-    services: ["Diseño de Sistema", "Desarrollo Full-Stack", "Desarrollo Mobile", "Consultas"],
+    services: ["Diseño de Sistema", "Desarrollo Full-Stack", "Consultas"],
   },
 } as const;
 
