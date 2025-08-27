@@ -125,14 +125,14 @@ export const DATA = {
           "Aprendí los conceptos básicos de la programación, desde los inicios con C++, VisualBasic y Java, hasta el prototipado de aplicaciones.",
       },
       {
-        title: "React: From zero to Expert - Udemy Fernando Herrera",
+        title: "React: De cero a experto - Udemy Fernando Herrera",
         date: "2019 - 2020",
         icon: "mdi:school",
         description:
           "Desarrollé mis habilidades como programador web, masterizando React como mi framework y profundizando en el espectro MERN dirigido al Full-Stack",
       },
       {
-        title: "React: Realtime applications - Udemy Fernando Herrera",
+        title: "React: Aplicaciones en tiempo real - Udemy Fernando Herrera",
         date: "2020 - 2020",
         icon: "mdi:school-outline",
         description:
@@ -142,7 +142,7 @@ export const DATA = {
     experience: [
       {
         title: "Freelancer (Remote)",
-        date: "2019 - 2023",
+        date: "2020 - 2022",
         icon: "mdi:briefcase",
         description:
           "Como freelancer he tenido la oportunidad de perfeccionar un gran repertorio de tecnologías en el Front y Backend, además de interactuar con múltiples clientes y creando herramientas en base a las necesidades de mis usuarios.",
@@ -152,7 +152,7 @@ export const DATA = {
         date: "2022 - 2023",
         icon: "mdi:code-tags",
         description:
-          "Encargado de la planificación y el desarrollo del proyecto, incluyendo: base de datos, API RESTful, front-end para mobile y microservicios como Lambda (AWS), hosting y dominio.",
+          "Encargado de la planificación y el desarrollo del proyecto, incluyendo: base de datos, API RESTful, front-end para mobile y microservicios como S3 (AWS), hosting y dominio.",
       },
       {
         title: "Academia de flamenco Andalucía ",
@@ -174,7 +174,7 @@ export const DATA = {
         description:
           "Creo interfaces de usuario dinámicas y responsivas utilizando marcos de JavaScript modernos y TailwindCSS.",
         tools: [
-          { name: "React", icon: "logos:react" },
+          { name: "React & React native", icon: "logos:react" },
           { name: "Next.js", icon: "skill-icons:nextjs-dark" },
           { name: "Tailwind", icon: "logos:tailwindcss-icon" },
           { name: "TypeScript", icon: "logos:typescript-icon" },
@@ -214,6 +214,7 @@ export const DATA = {
           { name: "Vercel", icon: "skill-icons:vercel-light",color:'#fff' },
           { name: "Heroku", icon: "cib:heroku", color:'#fff' },
           { name: "Maps", icon: "logos:google-maps" },
+          { name: "Play Console", icon: "logos:google-play-console-icon" },
         ],
       },
     },
