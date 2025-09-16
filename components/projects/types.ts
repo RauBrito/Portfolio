@@ -7,6 +7,7 @@ export interface Project {
   readonly image: string;
   readonly github?: string;
   readonly live?: string;
+  readonly playstore?: string;
   readonly gallery: readonly string[];
   tech: readonly {
     name: string;
