@@ -99,6 +99,17 @@ export const ProjectModal = ({
                 <Icon height={22} icon="mdi:web" width={22} />
               </a>
             )}
+            {project.playstore && (
+              <a
+                aria-label="View in Playstore"
+                className="text-foreground-500 hover:text-foreground transition"
+                href={project.playstore}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Icon height={22} icon="mage:playstore" width={22} />
+              </a>
+            )}
           </div>
         )}
 

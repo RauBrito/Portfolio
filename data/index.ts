@@ -240,6 +240,7 @@ export const DATA = {
         details:
           "NoRep es la herramienta definitiva para atletas y organizadores de eventos de CrossFit. Simplifica la creación, gestión y seguimiento de competiciones. Diseñada con un sistema de desempate basado en el rendimiento de los atletas. Desarrollada con React y React Native, ¡Próximamente en Google Play!.",
         github: undefined,
+        playstore: 'https://play.google.com/store/apps/details?id=norep.app',
         live: "https://norep.com.ve",
         tech: [
           { name: "TypeScript", icon: "logos:typescript-icon" },
