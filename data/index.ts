@@ -111,7 +111,7 @@ export const DATA = {
       image:
         "https://res.cloudinary.com/devq06psf/image/upload/v1750626859/chic_soba_apc1ht.png",
       description: [
-        "Soy un desarrollador full-stack creativo con pasión por los desafios lógicos y el código limpio. Me centro en crear sitios web y aplicaciones web atractivos, funcionales y de alto rendimiento.",
+        "Soy un desarrollador full-stack creativo con pasión por los desafios lógicos y el código limpio. Me centro en crear sitios web y aplicaciones web atractivas, funcionales y de alto rendimiento.",
         "Mi enfoque es mayormente dirigido hacia mis usuarios: disfruto convirtiendo problemas complejos en experiencias elegantes para mis clientes. Trabajo principalmente con frameworks modernos como React, Vite y TailwindCSS.",
         "Además de codear, disfruto del arte y la combinación de lo técnico con lo elegante, el desarrollo de videojuegos y el pixelart me ayudan a mantener mis habilidades e ideas frescas constantemente.",
       ],
