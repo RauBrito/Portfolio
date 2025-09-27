@@ -10,7 +10,7 @@ export default function AboutPage() {
   const tech = DATA.about.technologies;
 
   return (
-    <section className="py-20 px-6 md:px-12 max-w-5xl mx-auto text-foreground">
+    <section className="py-20 px-6 md:px-12 max-w-4xl mx-auto text-foreground">
       <PageHeader texts={DATA.morphingTexts.about} />
       <ProfileCard
         description={profile.description}

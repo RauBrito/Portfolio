@@ -21,7 +21,7 @@ export const Skills = ({ tech }: SkillsProps) => (
   >
     <SectionHeader icon="mdi:tools" title="Habilidades" />
 
-    <Accordion selectionMode="multiple" variant="bordered">
+    <Accordion selectionMode="multiple" variant="bordered" >
       {Object.entries(tech).map(([category, { description, tools }]) => (
         <AccordionItem
           key={category}
@@ -32,7 +32,7 @@ export const Skills = ({ tech }: SkillsProps) => (
 
           <div className="relative h-[300px] w-full">
             <OrbitingCircles
-              className="h-full w-full [&>div]:hover:scale-110 [&>div]:hover:text-primary-500"
+              className="h-[100px] mt-[100px] w-full [&>div]:hover:scale-110 [&>div]:hover:text-primary-500"
               duration={20}
               radius={120}
             >
